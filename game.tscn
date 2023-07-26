@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bough8yby7fcw"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_1nxi7"]
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_1nxi7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Control" type="Control" parent="Camera2D/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D/CanvasLayer/Control"]
+layout_mode = 1
+offset_right = 24.0
+offset_bottom = 26.0
+
+[node name="Label_objects" type="Label" parent="Camera2D/CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "0"
+
+[node name="Label_fps" type="Label" parent="Camera2D/CanvasLayer/Control/HBoxContainer"]
+layout_mode = 2
+text = "0"
+
+[node name="container" type="Node2D" parent="."]
